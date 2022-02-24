@@ -18,6 +18,15 @@ io.on('connection', socket => {
     socket.emit('connection', `Connection id:${socket.id}`)
 
 
+    socket.on('message', data => {
+        // saving to db
+
+    })
+
+
+    socket.on('disconnect', () => {
+        console.log('Disconnected from CID:', socket.id)
+    })
 })
 
 server.listen(PORT, () => console.log(infoMessage(`Application serves on port: ${PORT}`)))
