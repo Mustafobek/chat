@@ -8,6 +8,14 @@ const messageSchema = new mongoose.Schema({
     sentTime: {
         type: Date,
         required: true
+    },
+    room: {
+        type: Room,
+        required: true
+    },
+    user: {
+        type: User,
+        required: true
     }
 })
 

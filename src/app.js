@@ -17,10 +17,15 @@ io.on('connection', socket => {
     console.log(`CID: ${socket.id}`)
     socket.emit('connection', `Connection id:${socket.id}`)
 
+    // joining room
+    socket.on('join-room', (data) => {
 
-    socket.on('message', data => {
+    })
+
+
+    socket.on('chat-message', data => {
         // saving to db
-
+        console.log(data)
     })
 
 
