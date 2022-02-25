@@ -1,4 +1,7 @@
 import mongoose from 'mongoose'
+import Room from "./Room.js";
+import User from "./User.js";
+import moment from "moment";
 
 const messageSchema = new mongoose.Schema({
     text: {
@@ -6,15 +9,15 @@ const messageSchema = new mongoose.Schema({
         required: true
     },
     sentTime: {
-        type: Date,
-        required: true
+        type: String,
+        default: moment().format('DD-MM-YYYY HH:mm')
     },
     room: {
-        type: Room,
+        type: String,
         required: true
     },
     user: {
-        type: User,
+        type: String,
         required: true
     }
 })

@@ -1,10 +1,9 @@
-import * as mongoose from "mongoose";
-import {errorMessage, infoMessage} from "../utils/message.js";
+import mongoose from "mongoose";
+import {errorMessage, infoMessage} from "../utils/log-message.js";
 
 const DB_URI = process.env.DB_URI || 'mongodb://127.0.0.1:27017/chat-app'
 
-mongoose
-.connect(DB_URI, {
+mongoose.connect(DB_URI, {
     useUnifiedTopology: true,
     useNewUrlParser: true,
 })
